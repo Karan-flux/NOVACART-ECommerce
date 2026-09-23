@@ -1,0 +1,6 @@
+{
+  "name": "NovaCart - Premium Modern E-Commerce Platform",
+  "description": "Discover curated products for modern lifestyles. Premium fashion, electronics, fitness, home decor, and essentials with fast worldwide shipping.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
