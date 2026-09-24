@@ -14,7 +14,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ id, name, image, cou
   return (
     <Link
       to={`/category/${id}`}
-      className="group relative block aspect-[4/5] rounded-2xl overflow-hidden bg-[#F7F7F5] border border-[#E8E8E8] shadow-xs hover:shadow-md transition-all duration-300"
+      className="group relative block aspect-4/5 rounded-2xl overflow-hidden bg-[#F7F7F5] border border-[#E8E8E8] shadow-xs hover:shadow-md transition-all duration-300"
     >
       {/* Background Image */}
       <ProductImage

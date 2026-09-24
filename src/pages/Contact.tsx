@@ -75,7 +75,7 @@ export const ContactPage: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#111111]">Email Concierge</h4>
-                  <p className="text-xs text-[#737373] mt-0.5">support@novacart.shop</p>
+                  <p className="text-xs text-[#737373] mt-0.5">novariyanstudio@gmail.com</p>
                   <span className="text-[11px] text-emerald-600 font-semibold block mt-1">
                     Avg response time: 45 minutes
                   </span>
@@ -88,7 +88,7 @@ export const ContactPage: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#111111]">Toll-Free Phone</h4>
-                  <p className="text-xs text-[#737373] mt-0.5">+1 (800) 842-6682</p>
+                  <p className="text-xs text-[#737373] mt-0.5">+91-84716282</p>
                   <span className="text-[11px] text-[#737373] block mt-1">
                     Monday–Friday: 8:00 AM – 8:00 PM EST
                   </span>

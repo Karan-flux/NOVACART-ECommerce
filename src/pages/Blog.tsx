@@ -33,7 +33,7 @@ export const BlogPage: React.FC = () => {
             onClick={() => setSelectedPost(featured)}
             className="mb-14 rounded-3xl border border-[#E8E8E8] overflow-hidden bg-white hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 cursor-pointer group"
           >
-            <div className="lg:col-span-7 aspect-[16/10] overflow-hidden bg-[#F7F7F5]">
+            <div className="lg:col-span-7 aspect-16/10 overflow-hidden bg-[#F7F7F5]">
               <ProductImage
                 src={featured.image}
                 alt={featured.title}
@@ -79,7 +79,7 @@ export const BlogPage: React.FC = () => {
               onClick={() => setSelectedPost(post)}
               className="bg-white rounded-2xl border border-[#E8E8E8] overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col cursor-pointer group"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-[#F7F7F5]">
+              <div className="aspect-16/10 overflow-hidden bg-[#F7F7F5]">
                 <ProductImage
                   src={post.image}
                   alt={post.title}
@@ -127,7 +127,7 @@ export const BlogPage: React.FC = () => {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="aspect-[16/9] rounded-2xl overflow-hidden mb-6 bg-[#F7F7F5]">
+            <div className="aspect-16/9 rounded-2xl overflow-hidden mb-6 bg-[#F7F7F5]">
               <ProductImage
                 src={selectedPost.image}
                 alt={selectedPost.title}

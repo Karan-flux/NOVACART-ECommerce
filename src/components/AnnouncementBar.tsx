@@ -8,12 +8,12 @@ export const AnnouncementBar: React.FC = () => {
         <div className="flex items-center gap-2 sm:gap-6 flex-wrap justify-center">
           <span className="inline-flex items-center gap-1.5 text-white/90">
             <Truck className="w-3.5 h-3.5 text-[#FF5A36]" />
-            Free Worldwide Shipping on Orders Over $50
+            50% off on your first order
           </span>
           <span className="hidden sm:inline text-white/30">|</span>
           <span className="inline-flex items-center gap-1.5 text-white/90">
             <Tag className="w-3.5 h-3.5 text-[#FF5A36]" />
-            Summer Sale Up To 70% Off
+            Puja Sale Up To 70% Off
           </span>
           <span className="hidden md:inline text-white/30">|</span>
           <span className="hidden md:inline-flex items-center gap-1.5 text-white/90">

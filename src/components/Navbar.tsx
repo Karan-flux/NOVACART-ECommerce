@@ -1,11 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, Link, useNavigate } from 'react-router-dom';
-import { Search, Heart, User, ShoppingBag, Menu, ChevronDown } from 'lucide-react';
-import { useCart } from '../context/CartContext';
-import { useWishlist } from '../context/WishlistContext';
-import { CATEGORIES } from '../data/products';
-import { MobileMenu } from './MobileMenu';
-import { SearchOverlay } from './SearchOverlay';
+import React, { useState, useEffect } from "react";
+import { NavLink, Link, useNavigate } from "react-router-dom";
+import {
+  Search,
+  Heart,
+  User,
+  ShoppingBag,
+  Menu,
+  ChevronDown,
+} from "lucide-react";
+import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
+import { CATEGORIES } from "../data/products";
+import { MobileMenu } from "./MobileMenu";
+import { SearchOverlay } from "./SearchOverlay";
 
 export const Navbar: React.FC = () => {
   const { getCartCount, setIsCartOpen } = useCart();
@@ -21,8 +28,8 @@ export const Navbar: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const cartCount = getCartCount();
@@ -33,8 +40,8 @@ export const Navbar: React.FC = () => {
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-xs border-b border-[#E8E8E8]'
-            : 'bg-white border-b border-[#E8E8E8]'
+            ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-[#E8E8E8]"
+            : "bg-white border-b border-[#E8E8E8]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between gap-4">
@@ -62,7 +69,7 @@ export const Navbar: React.FC = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? 'text-[#FF5A36] font-semibold' : 'text-[#111111]'}`
+                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? "text-[#FF5A36] font-semibold" : "text-[#111111]"}`
               }
             >
               Home
@@ -71,7 +78,7 @@ export const Navbar: React.FC = () => {
             <NavLink
               to="/shop"
               className={({ isActive }) =>
-                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? 'text-[#FF5A36] font-semibold' : 'text-[#111111]'}`
+                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? "text-[#FF5A36] font-semibold" : "text-[#111111]"}`
               }
             >
               Shop
@@ -80,7 +87,7 @@ export const Navbar: React.FC = () => {
             <NavLink
               to="/shop?filter=new"
               className={({ isActive }) =>
-                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? 'text-[#FF5A36] font-semibold' : 'text-[#111111]'}`
+                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? "text-[#FF5A36] font-semibold" : "text-[#111111]"}`
               }
             >
               New Arrivals
@@ -89,7 +96,7 @@ export const Navbar: React.FC = () => {
             <NavLink
               to="/shop?filter=bestseller"
               className={({ isActive }) =>
-                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? 'text-[#FF5A36] font-semibold' : 'text-[#111111]'}`
+                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? "text-[#FF5A36] font-semibold" : "text-[#111111]"}`
               }
             >
               Best Sellers
@@ -103,7 +110,7 @@ export const Navbar: React.FC = () => {
             >
               <button
                 className="flex items-center gap-1 hover:text-[#FF5A36] transition-colors py-1 cursor-pointer font-medium"
-                onClick={() => navigate('/shop')}
+                onClick={() => navigate("/shop")}
               >
                 <span>Categories</span>
                 <ChevronDown className="w-3.5 h-3.5 text-[#737373] group-hover:rotate-180 transition-transform duration-200" />
@@ -122,7 +129,9 @@ export const Navbar: React.FC = () => {
                       className="flex items-center justify-between px-3 py-2 text-xs font-semibold text-[#111111] hover:bg-[#F7F7F5] hover:text-[#FF5A36] transition-colors rounded-lg mx-1"
                     >
                       <span>{cat.name}</span>
-                      <span className="text-[10px] text-[#737373] font-normal">{cat.count}</span>
+                      <span className="text-[10px] text-[#737373] font-normal">
+                        {cat.count}
+                      </span>
                     </Link>
                   ))}
                   <div className="p-2 border-t border-[#E8E8E8] mt-1 bg-[#F7F7F5]/50">
@@ -141,7 +150,7 @@ export const Navbar: React.FC = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? 'text-[#FF5A36] font-semibold' : 'text-[#111111]'}`
+                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? "text-[#FF5A36] font-semibold" : "text-[#111111]"}`
               }
             >
               About
@@ -150,7 +159,7 @@ export const Navbar: React.FC = () => {
             <NavLink
               to="/blog"
               className={({ isActive }) =>
-                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? 'text-[#FF5A36] font-semibold' : 'text-[#111111]'}`
+                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? "text-[#FF5A36] font-semibold" : "text-[#111111]"}`
               }
             >
               Blog
@@ -159,7 +168,7 @@ export const Navbar: React.FC = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? 'text-[#FF5A36] font-semibold' : 'text-[#111111]'}`
+                `transition-colors hover:text-[#FF5A36] py-1 ${isActive ? "text-[#FF5A36] font-semibold" : "text-[#111111]"}`
               }
             >
               Contact
@@ -228,23 +237,32 @@ export const Navbar: React.FC = () => {
             <div className="w-12 h-12 rounded-full bg-[#F7F7F5] border border-[#E8E8E8] flex items-center justify-center mx-auto mb-3">
               <User className="w-6 h-6 text-[#111111]" />
             </div>
-            <h3 className="text-center text-lg font-bold text-[#111111]">NovaCart VIP Member</h3>
+            <h3 className="text-center text-lg font-bold text-[#111111]">
+              NovaCart VIP Member
+            </h3>
             <p className="text-center text-xs text-[#737373] mt-1 mb-5">
-              Welcome back! Enjoy member-exclusive preview discounts and free global shipping.
+              Welcome back! Enjoy member-exclusive preview discounts and free
+              global shipping.
             </p>
 
             <div className="space-y-2 text-xs">
               <div className="p-3 bg-[#F7F7F5] rounded-xl flex items-center justify-between">
                 <span className="text-[#737373]">Account Status</span>
-                <span className="font-semibold text-emerald-600">Active VIP</span>
+                <span className="font-semibold text-emerald-600">
+                  Active VIP
+                </span>
               </div>
               <div className="p-3 bg-[#F7F7F5] rounded-xl flex items-center justify-between">
                 <span className="text-[#737373]">Member Tier</span>
-                <span className="font-semibold text-[#111111]">Platinum Shopper</span>
+                <span className="font-semibold text-[#111111]">
+                  Platinum Shopper
+                </span>
               </div>
               <div className="p-3 bg-[#F7F7F5] rounded-xl flex items-center justify-between">
                 <span className="text-[#737373]">Active Coupon</span>
-                <span className="font-mono font-bold text-[#FF5A36]">NOVA20 (20% OFF)</span>
+                <span className="font-mono font-bold text-[#FF5A36]">
+                  NOVA20 (20% OFF)
+                </span>
               </div>
             </div>
 
@@ -252,7 +270,7 @@ export const Navbar: React.FC = () => {
               <button
                 onClick={() => {
                   setIsAccountModalOpen(false);
-                  navigate('/wishlist');
+                  navigate("/wishlist");
                 }}
                 className="flex-1 py-2.5 bg-[#F7F7F5] hover:bg-[#E8E8E8] text-[#111111] rounded-xl text-xs font-semibold transition-colors"
               >

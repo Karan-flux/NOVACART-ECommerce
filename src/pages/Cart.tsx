@@ -89,7 +89,7 @@ export const CartPage: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
         {/* Free Shipping Tracker */}
-        <div className="mb-8 p-4 bg-[#F7F7F5] rounded-2xl border border-[#E8E8E8]">
+        <div className="p-4 bg-[#F7F7F5] rounded-2xl border border-[#E8E8E8]">
           <div className="flex items-center justify-between text-xs sm:text-sm mb-2 font-medium">
             <span className="flex items-center gap-2 text-[#111111]">
               <Truck className="w-4 h-4 text-[#FF5A36]" />
